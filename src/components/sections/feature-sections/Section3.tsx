@@ -12,9 +12,11 @@ const PLATFORM_FEATURES = [
   { title: "Preview URLs", icon: "/icons/section3/browser.svg" },
 ]
 
+const EASE_OUT = [0.16, 1, 0.3, 1] as const
+
 const sectionReveal = {
   hidden: { opacity: 0, y: 16 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: EASE_OUT } },
 }
 
 const staggerContainer = {
@@ -24,7 +26,7 @@ const staggerContainer = {
 
 const cardReveal = {
   hidden: { opacity: 0, y: 10 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: EASE_OUT } },
 }
 
 export function Section3() {
