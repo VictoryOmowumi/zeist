@@ -96,7 +96,7 @@ export function Section1() {
           {FEATURES.map((feature) => (
             <motion.div
               key={feature.title}
-              className=" px-16 py-10 nth-[2]:border-x border-white/10"
+              className=" px-4 lg:px-16 py-10 nth-[2]:border-x border-white/10"
               variants={cardReveal}
             >
               <Image src={feature.icon} alt="" width={34} height={34} className="mb-4 h-auto w-auto" />
@@ -106,7 +106,7 @@ export function Section1() {
           ))}
 
           <motion.div
-            className=" px-16 py-10 lg:col-span-3 md:border-l border-t border-white/10 flex flex-col lg:flex-row items-center gap-24"
+            className=" px-4 lg:px-16 py-10 lg:col-span-3 md:border-l border-t border-white/10 flex flex-col lg:flex-row items-center gap-24"
             variants={cardReveal}
           >
             <div className="flex flex-col">
@@ -114,7 +114,7 @@ export function Section1() {
               <h3 className="text-white text-[17px] font-medium">Multi-Language Support</h3>
               <p className="mt-2 text-[15px] text-[#8B8890] max-w-[250px]">Python, Node, Go, Bash (expandable)</p>
             </div>
-            <div className=" flex justify-center">
+            <div className="hidden lg:flex justify-center">
               <Image
                 src={ICONS.logos}
                 alt="Language logos"
@@ -124,6 +124,9 @@ export function Section1() {
               />
             </div>
           </motion.div>
+          <div className="block lg:hidden col-span-2">
+            <Image src={ICONS.logos} alt="Language logos" width={500} height={100} className="h-auto w-full " />
+          </div>
         </motion.div>
       </motion.div>
     </div>

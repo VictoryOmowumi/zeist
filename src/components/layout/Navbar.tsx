@@ -7,7 +7,7 @@ import Image from "next/image"
 export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-y border-white/10  bg-background/80 backdrop-blur-xl h-[80px] mt-2">
-      <div className="mx-auto flex h-[calc(100%-1px)] max-w-7xl items-center justify-between  relative px-2 md:px-6 lg:px-0">
+      <div className="mx-auto flex h-[calc(100%-1px)] max-w-7xl items-center justify-between  relative px-4 md:px-6 lg:px-0">
         
         <div className="absolute -top-1 -left-1 z-50 hidden lg:block text-[#57565B]">
             <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg" className="">

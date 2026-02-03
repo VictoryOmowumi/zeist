@@ -16,17 +16,6 @@ const ROTATING_TEXTS = [
   "CI/CD Pipelines",
 ]
 
-const TERMINAL_LINES = [
-  { text: "zeist sandbox create", type: "command" },
-  { text: "// provision isolated runtime", type: "comment" },
-  { text: "zeist run main.py", type: "command" },
-  { text: "// execute code safely", type: "comment" },
-  { text: "zeist logs --stream", type: "command" },
-  { text: "// view live output", type: "comment" },
-  { text: "zeist preview open", type: "command" },
-  { text: "// share preview URL", type: "comment" },
-]
-
 export function Hero() {
   const [index, setIndex] = useState(0)
 
@@ -34,7 +23,7 @@ export function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % ROTATING_TEXTS.length)
-    }, 3000)
+    }, 5000)
     return () => clearInterval(interval)
   }, [])
 
@@ -52,7 +41,7 @@ export function Hero() {
                 initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}
                 animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
                 exit={{ opacity: 0, filter: "blur(10px)", y: -10 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
                 className="absolute -top-8 md:top-0 lg:top-0 left-0 right-0 md:relative"
               >
                 {ROTATING_TEXTS[index]}
